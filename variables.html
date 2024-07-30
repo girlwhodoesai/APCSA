@@ -1,0 +1,530 @@
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PRRFTJ9K1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5PRRFTJ9K1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+          width: 70%; 
+          margin: 0 auto; /* Center align the body */
+      }
+    </style>
+    <title>Topic 1.2 Understanding Variables and Data Types in Java</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+	<div id="header"></div>
+<div class=WordSection1>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:24.0pt;
+font-family:"Times New Roman",serif;color:black'>Topic 1.2 Understanding
+Variables and Data Types in Java</span></b></p>
+
+<p class=MsoNormal>Covers following:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Identify
+the most appropriate data type category for a particular specification.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Primitive
+and Reference Data types</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Three
+primitive data types: int, double and Boolean</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Memory
+associated with a value</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>When
+a variable is declared final, its value cannot be changed once it is
+initialized.</p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>Introduction</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>In Java, variables are used to
+store data that can be used and manipulated throughout a program. Each variable
+has a data type that defines what kind of data it can hold. In this lesson, we
+will explore the three main primitive data types used in Java:&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>int</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>,&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>double</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>,
+and&nbsp;</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>boolean</span><span style='font-size:13.5pt;font-family:"Times New Roman",serif;
+color:black'>. We will also learn about the&nbsp;</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'>final</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;keyword
+and how it makes variables constant. Additionally, we will look at the
+difference between primitive and reference data types.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>1. What are Variables?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>A variable is a named space in
+memory that stores data. Think of it as a box with a label on it where you can
+put things. Each box (variable) can hold only one type of item (data type).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Example:</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Imagine you have a box labeled
+&quot;age&quot; where you can store your age, and another box labeled
+&quot;temperature&quot; to store the temperature outside.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>2. Data Types in Java</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Java has different data types
+to specify what kind of data a variable can hold. In this course, we focus on
+three primitive data types:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:10.0pt;font-family:"Courier New"'>int</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>: for storing
+     whole numbers.</span></li>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:10.0pt;font-family:"Courier New"'>double</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>: for storing
+     decimal numbers.</span></li>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:10.0pt;font-family:"Courier New"'>boolean</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>: for storing
+     true or false values.</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>int</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>The&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>int</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;data
+type is used to store whole numbers (integers).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>int age = 16;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>double</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>The&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>double</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;data
+type is used to store decimal numbers (floating-point numbers).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>double
+temperature = 98.6;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>boolean</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>The&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>boolean</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;data
+type is used to store true or false values.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>boolean
+isJavaFun = true;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>3. Using&nbsp;</span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>final</span></b><b><span
+style='font-size:18.0pt;font-family:"Times New Roman",serif;color:black'>&nbsp;Keyword</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>When a variable is declared
+with the&nbsp;</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>final</span><span style='font-size:13.5pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;keyword, its value cannot be changed once it has been
+initialized. This makes the variable a constant.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>final int
+daysInWeek = 7;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>4. Primitive vs. Reference
+Data Types</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Primitive Data Types</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Primitive data types store the
+actual values. They are predefined by the Java language and are named by
+reserved keywords.</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>Examples:&nbsp;</span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>int</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>,&nbsp;</span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>double</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>,&nbsp;</span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>boolean</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Reference Data Types</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Reference data types store
+references (addresses) to the actual objects in memory. They are created using
+defined classes and can be used to call methods to perform operations.</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>Examples:&nbsp;</span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>String</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>,&nbsp;</span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>Array</span><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>,&nbsp;</span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>Scanner</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Example:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>// Primitive
+data type example</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>int number = 10;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>// Reference
+data type example</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>String greeting
+= &quot;Hello, World!&quot;;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>In the above examples,&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>number</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;holds
+the actual integer value&nbsp;</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:black'>10</span><span style='font-size:13.5pt;font-family:
+"Times New Roman",serif;color:black'>, whereas&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>greeting</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;holds
+a reference to the string object &quot;Hello, World!&quot;.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>Real-World Example</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Imagine you are creating a
+program to track the progress of a video game player. You need to store their
+age, score, and whether they have completed the game or not.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>int playerAge =
+18; // Player's age (primitive)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>double
+playerScore = 1500.75; // Player's score (primitive)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>boolean
+gameCompleted = false; // Has the player completed the game? (primitive)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>String
+playerName = &quot;Alex&quot;; // Player's name (reference)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>Full Program Example</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Here is a simple Java program
+that demonstrates how to use variables and data types:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>public class
+VariablesDemo {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>��� public
+static void main(String[] args) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+Declare an integer variable and initialize it</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� int age
+= 16;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+Declare a double variable and initialize it</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� double
+temperature = 72.5;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+Declare a boolean variable and initialize it</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� boolean
+isJavaFun = true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+Declare a final variable (constant)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� final
+int daysInWeek = 7;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+Declare a reference variable (String) and initialize it</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� String
+greeting = &quot;Hello, Java!&quot;;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� // Print
+the values of the variables</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>�������
+System.out.println(&quot;Age: &quot; + age);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>�������
+System.out.println(&quot;Temperature: &quot; + temperature);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>�������
+System.out.println(&quot;Is Java Fun: &quot; + isJavaFun);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>�������
+System.out.println(&quot;Days in a Week: &quot; + daysInWeek);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>�������
+System.out.println(&quot;Greeting: &quot; + greeting);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+Uncommenting the next line will cause an error because daysInWeek is final</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>������� //
+daysInWeek = 8;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>��� }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>Programming Problem</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Create a Java program that
+declares variables for the following:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>Your name
+     (String)</span></li>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>Your favorite
+     number (int)</span></li>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>The average
+     grade in your class (double)</span></li>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>Whether you
+     have completed your homework (boolean)</span></li>
+ <li class=MsoNormal style='color:black;line-height:normal'><span
+     style='font-size:13.5pt;font-family:"Times New Roman",serif'>The number of
+     days in a month (final int)</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Print out the values of all
+these variables.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Sample Output</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>Name: John Doe</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>Favorite Number:
+7</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>Average Grade:
+85.5</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>Completed
+Homework: true</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>Days in a Month:
+30</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Times New Roman",serif;color:black'>Conclusion</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:13.5pt;
+font-family:"Times New Roman",serif;color:black'>Variables and data types are
+fundamental concepts in programming. By understanding how to declare and use
+them, you can start creating more complex and functional programs. Practice
+using&nbsp;</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>int</span><span style='font-size:13.5pt;font-family:"Times New Roman",serif;
+color:black'>,&nbsp;</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>double</span><span style='font-size:13.5pt;font-family:"Times New Roman",serif;
+color:black'>, and&nbsp;</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>boolean</span><span style='font-size:13.5pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;data types, and remember that the&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>final</span><span
+style='font-size:13.5pt;font-family:"Times New Roman",serif;color:black'>&nbsp;keyword
+can be used to create constants. Also, be aware of the difference between
+primitive and reference data types. Happy coding!</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8607681845167073"
+        crossorigin="anonymous"></script>
+        <!-- tan-apcsa -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-8607681845167073"
+        data-ad-slot="4753972224"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div id="footer"></div> 
+    <script src="https://girlwhodoesai.github.io/APCSA/headerfooter.js"></script>
+</body>
+
+</html>

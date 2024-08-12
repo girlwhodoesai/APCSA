@@ -1,0 +1,307 @@
+<html>
+
+<head>
+	    <!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PRRFTJ9K1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-5PRRFTJ9K1');
+		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		  body {
+			  width: 70%; 
+			  margin: 0 auto; /* Center align the body */
+		  }
+		</style>
+		<title>Topic 1.3 Expressions and Assignment Statements in Java</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+	<div id="header"></div>
+<div class=WordSection1>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b><span style='font-size:22.0pt;line-height:107%'>Expressions
+and Assignment Statements in Java</span></b></p>
+
+<p class=MsoNormal>Welcome to the world of programming! Today, we'll dive into
+some fundamental concepts in Java: expressions and assignment statements. These
+are the building blocks of any program. Let's break them down step by step.</p>
+
+<p class=MsoNormal><b>1. Literals</b></p>
+
+<p class=MsoNormal>A literal is a fixed value that we write directly in the
+code. Think of it as a number or text that doesn't change. Here are some
+examples:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>5 is an integer literal.</li>
+ <li class=MsoNormal>3.14 is a double literal.</li>
+ <li class=MsoNormal>&quot;Hello, World!&quot; is a string literal.</li>
+</ul>
+
+<p class=MsoNormal><b>2. Arithmetic Expressions</b></p>
+
+<p class=MsoNormal>Arithmetic expressions use arithmetic operators to perform
+calculations. The basic operators are:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>+ for addition</li>
+ <li class=MsoNormal>- for subtraction</li>
+ <li class=MsoNormal>* for multiplication</li>
+ <li class=MsoNormal>/ for division</li>
+ <li class=MsoNormal>% for modulus (remainder)</li>
+</ul>
+
+<p class=MsoNormal><b>Examples:</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>5 + 3 results in 8</li>
+ <li class=MsoNormal>10 - 2 results in 8</li>
+ <li class=MsoNormal>4 * 2 results in 8</li>
+ <li class=MsoNormal>16 / 2 results in 8</li>
+ <li class=MsoNormal>17 % 3 results in 2 (because 17 divided by 3 leaves a
+     remainder of 2)</li>
+</ul>
+
+<p class=MsoNormal><b>3. Integer and Double Arithmetic</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>When we perform arithmetic with two int values, the result
+     is an int.</li>
+ <li class=MsoNormal>When we perform arithmetic with a double value, the result
+     is a double.</li>
+</ul>
+
+<p class=MsoNormal><b>Examples:</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>5 + 3 is int + int, so the result is int (8).</li>
+ <li class=MsoNormal>5.0 + 3 is double + int, so the result is double (8.0).</li>
+</ul>
+
+<p class=MsoNormal><b>4. Compound Expressions</b></p>
+
+<p class=MsoNormal>We can combine multiple arithmetic operations in one
+expression. For example, 5 + 3 * 2 is a compound expression.</p>
+
+<p class=MsoNormal><b>Operator Precedence</b></p>
+
+<p class=MsoNormal>Operator precedence determines the order in which operations
+are performed. Multiplication and division have higher precedence than addition
+and subtraction.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>5 + 3 * 2 is evaluated as 5 + (3 * 2), resulting in 11.</li>
+</ul>
+
+<p class=MsoNormal><b>5. Division by Zero</b></p>
+
+<p class=MsoNormal>Attempting to divide an integer by zero in Java will result
+in an ArithmeticException.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>10 / 0 will cause an error.</li>
+</ul>
+
+<p class=MsoNormal><b>6. Assignment Statements</b></p>
+
+<p class=MsoNormal>An assignment statement assigns a value to a variable. It
+uses the = operator.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>int a = 5; // Assigns the value 5 to the variable a</p>
+
+<p class=MsoNormal><b>Real-World Example</b></p>
+
+<p class=MsoNormal>Imagine you are calculating the total cost of items in a
+shopping cart. Each item has a price, and you want to find the total.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>double item1 = 5.99;</p>
+
+<p class=MsoNormal>double item2 = 3.49;</p>
+
+<p class=MsoNormal>double totalCost = item1 + item2;</p>
+
+<p class=MsoNormal>System.out.println(&quot;Total cost: &quot; + totalCost);</p>
+
+<p class=MsoNormal><b>Full Program Demonstrating the Concepts</b></p>
+
+<p class=MsoNormal>Here is a simple Java program that demonstrates arithmetic
+expressions and assignment statements:</p>
+
+<p class=MsoNormal>public class ArithmeticDemo {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Literals</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int num1 = 10; // integer literal</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double num2 = 5.5; // double literal</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Arithmetic expressions</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int sum = num1 + 5; // addition</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double product = num2 * 2; // multiplication</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Compound expression</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double result = (num1 + 5) * num2; // (10 + 5) * 5.5
+= 15 * 5.5 = 82.5</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Division by zero (uncommenting the next line will
+cause an error)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // int error = num1 / 0;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Printing the results</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Sum: &quot; + sum);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Product: &quot; + product);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Result: &quot; + result);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal><b>Programming Problem</b></p>
+
+<p class=MsoNormal>Write a program that calculates the average of three
+numbers. Use literals for the three numbers and use arithmetic expressions to
+find their average. Then, print the result.</p>
+
+<p class=MsoNormal><b>Steps:</b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Assign three numbers to three different variables.</li>
+ <li class=MsoNormal>Calculate the sum of the three numbers.</li>
+ <li class=MsoNormal>Divide the sum by 3 to find the average.</li>
+ <li class=MsoNormal>Print the average.</li>
+</ol>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>public class AverageCalculator {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Step 1: Assign numbers to variables</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int num1 = 8;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int num2 = 12;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int num3 = 15;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Step 2: Calculate the sum</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int sum = num1 + num2 + num3;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Step 3: Calculate the average</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double average = sum / 3.0;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Step 4: Print the average</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Average: &quot; + average);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>Happy coding! Understanding these basics will set a strong
+foundation for your programming journey.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8607681845167073"
+        crossorigin="anonymous"></script>
+        <!-- tan-apcsa -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-8607681845167073"
+        data-ad-slot="4753972224"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div id="footer"></div> 
+    <script src="https://girlwhodoesai.github.io/APCSA/headerfooter.js"></script>
+</body>
+
+</html>

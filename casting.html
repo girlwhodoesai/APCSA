@@ -1,0 +1,346 @@
+<html>
+
+<head>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PRRFTJ9K1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-5PRRFTJ9K1');
+		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		  body {
+			  width: 70%; 
+			  margin: 0 auto; /* Center align the body */
+		  }
+		</style>
+		<title>Topic 1.5: Casting and Ranges of Variables</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+	<div id="header"></div>
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span style='font-size:20.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:20.0pt;line-height:107%'>Topic
+1.5: Casting and Ranges of Variables</span></b></p>
+
+<p class=MsoNormal><b>Understanding Casting and Ranges of Variables</b></p>
+
+<p class=MsoNormal>When working with variables in Java, it's essential to
+understand how different data types interact, especially when converting one
+type to another. This is called <b><i>casting</i></b>. Let's dive into the key
+concepts of casting and the ranges of variables.</p>
+
+<p class=MsoNormal><b>1. Casting Operators: (int) and (double)</b></p>
+
+<p class=MsoNormal>Casting is the process of converting a variable from one
+type to another. In Java, you can use casting operators to create a temporary
+value of a different data type.</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>(int) casts a value to an integer.</li>
+ <li class=MsoNormal>(double) casts a value to a double.</li>
+</ul>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>double pi = 3.14159;</p>
+
+<p class=MsoNormal>int intPi = (int) pi;&nbsp; // Casts the double value of pi to an
+integer</p>
+
+<p class=MsoNormal>System.out.println(intPi);&nbsp; // Output: 3</p>
+
+<p class=MsoNormal>In this example, the value 3.14159 is cast to an integer,
+resulting in 3.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>2. Truncation When Casting Double to Int</b></p>
+
+<p class=MsoNormal>When you cast a double to an int, the digits to the right of
+the decimal point are truncated (cut off), <b><u>not rounded</u></b>.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>double number = 9.99;</p>
+
+<p class=MsoNormal>int truncatedNumber = (int) number;&nbsp; // Truncates the
+decimal part</p>
+
+<p class=MsoNormal>System.out.println(truncatedNumber);&nbsp; // Output: 9</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>3. Automatic Casting (Widening)</b></p>
+
+<p class=MsoNormal>Java automatically casts (widens) an int to a double when
+necessary. This happens because a double can hold larger and more precise
+values than an int.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>int count = 10;</p>
+
+<p class=MsoNormal>double newCount = count;&nbsp; // Automatically casts int to
+double</p>
+
+<p class=MsoNormal>System.out.println(newCount);&nbsp; // Output: 10.0</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>4. Rounding a Double to the Nearest Integer</b></p>
+
+<p class=MsoNormal>To round a double to the nearest integer, you can use:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>(int)(x + 0.5) for positive numbers.</li>
+ <li class=MsoNormal>(int)(x - 0.5) for negative numbers.</li>
+</ul>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>double number = 4.7;</p>
+
+<p class=MsoNormal>int roundedNumber = (int)(number + 0.5);&nbsp; // Rounds to the
+nearest integer</p>
+
+<p class=MsoNormal>System.out.println(roundedNumber);&nbsp; // Output: 5</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>5. Ranges of Integer Values</b></p>
+
+<p class=MsoNormal>In Java, int values are represented using 4 bytes of memory,
+which means they must fall within the range:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Integer.MIN_VALUE (-2,147,483,648)</li>
+ <li class=MsoNormal>Integer.MAX_VALUE (2,147,483,647)</li>
+</ul>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>6. Integer Overflow</b></p>
+
+<p class=MsoNormal>If an expression evaluates to a value outside the int range,
+an integer overflow occurs, resulting in an incorrect value within the allowed
+range.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>int largeNumber = Integer.MAX_VALUE;</p>
+
+<p class=MsoNormal>int overflow = largeNumber + 1;&nbsp; // Causes overflow</p>
+
+<p class=MsoNormal>System.out.println(overflow);&nbsp; // Output: -2147483648</p>
+
+<p class=MsoNormal><b>Real-World Example: Converting Temperature</b></p>
+
+<p class=MsoNormal>Let's say you want to convert a temperature from Fahrenheit
+to Celsius. You might get a decimal result that you need to cast to an integer.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>double fahrenheit = 98.6;</p>
+
+<p class=MsoNormal>double celsius = (fahrenheit - 32) * 5 / 9;</p>
+
+<p class=MsoNormal>int roundedCelsius = (int)(celsius + 0.5);&nbsp; // Rounds to
+nearest integer</p>
+
+<p class=MsoNormal>System.out.println(&quot;Temperature in Celsius: &quot; +
+roundedCelsius);&nbsp; // Output: 37</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Full Program Example</b></p>
+
+<p class=MsoNormal>Here's a full Java program demonstrating the concepts of
+casting and ranges of variables:</p>
+
+<p class=MsoNormal>java</p>
+
+<p class=MsoNormal>Copy code</p>
+
+<p class=MsoNormal>public class CastingAndRanges {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Example of casting double to int</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double originalDouble = 5.99;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int castedInt = (int) originalDouble;&nbsp; // Truncates
+to 5</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Casted int: &quot; +
+castedInt);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Automatic casting (widening) from int to double</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int originalInt = 10;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double widenedDouble = originalInt;&nbsp; //
+Automatically casts to 10.0</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Widened double: &quot; +
+widenedDouble);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Rounding a double to the nearest integer</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double numberToRound = 7.6;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int roundedInt = (int)(numberToRound + 0.5);&nbsp; //
+Rounds to 8</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Rounded int: &quot; +
+roundedInt);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Demonstrating integer overflow</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int maxInt = Integer.MAX_VALUE;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int overflowInt = maxInt + 1;&nbsp; // Causes overflow</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Overflowed int: &quot; +
+overflowInt);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Programming Problem</b></p>
+
+<p class=MsoNormal>Write a program that:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Prompts the user to enter a temperature in Fahrenheit.</li>
+ <li class=MsoNormal>Converts the temperature to Celsius.</li>
+ <li class=MsoNormal>Rounds the Celsius temperature to the nearest integer.</li>
+ <li class=MsoNormal>Prints the rounded Celsius temperature.</li>
+</ol>
+
+<p class=MsoNormal><b>Hints:</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>Use Scanner to get user input.</li>
+ <li class=MsoNormal>Use the formula: celsius = (fahrenheit - 32) * 5 / 9.</li>
+ <li class=MsoNormal>Round the result using (int)(celsius + 0.5).</li>
+</ul>
+
+<p class=MsoNormal><b>Sample Solution:</b></p>
+
+<p class=MsoNormal>import java.util.Scanner;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>public class TemperatureConverter {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scanner scanner = new Scanner(System.in);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.print(&quot;Enter temperature in
+Fahrenheit: &quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double fahrenheit = scanner.nextDouble();</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double celsius = (fahrenheit - 32) * 5 / 9;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int roundedCelsius = (int)(celsius + 0.5);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Temperature in Celsius:
+&quot; + roundedCelsius);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>Now you have a solid understanding of casting and ranges of
+variables in Java! Practice these concepts by writing your own programs and
+experimenting with different values. Happy coding!</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8607681845167073"
+        crossorigin="anonymous"></script>
+        <!-- tan-apcsa -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-8607681845167073"
+        data-ad-slot="4753972224"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div id="footer"></div> 
+    <script src="https://girlwhodoesai.github.io/APCSA/headerfooter.js"></script>
+</body>
+
+</html>

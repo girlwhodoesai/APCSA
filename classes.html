@@ -1,0 +1,334 @@
+<html>
+
+<head>
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PRRFTJ9K1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-5PRRFTJ9K1');
+			</script>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<style>
+			  body {
+				  width: 70%; 
+				  margin: 0 auto; /* Center align the body */
+			  }
+			</style>
+			<title>Topic 2.1 Understanding Objects and Classes in Java</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoChpDefault
+	{font-size:11.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+	<div id="header"></div>
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span style='font-size:24.0pt;line-height:107%'>Topic 2.1
+Understanding Objects and Classes in Java</span></b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:107%'>What is
+an Object?</span></b></p>
+
+<p class=MsoNormal>An <b>object</b> is a specific instance of a class. Think of
+an object as a real-world thing that has specific properties (attributes) and
+can perform actions (methods).</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>Imagine a car. A car is an object. It has properties like
+color, model, speed, and fuel level. It can perform actions like starting,
+stopping, accelerating, and braking.</p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:107%'>What is a
+Class?</span></b></p>
+
+<p class=MsoNormal>A <b>class</b> is like a blueprint for creating objects. It
+defines the properties and behaviors that the objects created from the class
+will have.</p>
+
+<p class=MsoNormal><b>Example:</b></p>
+
+<p class=MsoNormal>Continuing with the car analogy, if a car is an object, the
+blueprint for making a car is the class. The class defines what attributes
+(like color and model) and methods (like start and stop) every car object will
+have.</p>
+
+<p class=MsoNormal><b>Real-World Example:</b></p>
+
+<p class=MsoNormal>Let's take a <b>class</b> called Car. This class will define
+what every car object can have and do. When we create a new car object from the
+Car class, we can set its attributes and use its methods.</p>
+
+<p class=MsoNormal><b>Blueprint (Class) - Car:</b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b>Attributes</b>: color, model, speed</li>
+ <li class=MsoNormal><b>Methods</b>: start, stop, accelerate</li>
+</ul>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:18.0pt;line-height:107%'>Creating
+an Object:</span></b></p>
+
+<p class=MsoNormal>Using the Car class, we can create a car object with
+specific attributes.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>public class Car {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Attributes (properties)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; String color;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; String model;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; int speed;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Method to start the car</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; void start() {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car is starting.&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Method to stop the car</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; void stop() {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car is stopping.&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Method to accelerate the car</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; void accelerate() {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speed += 10;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car is accelerating. Speed:
+&quot; + speed + &quot; km/h&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Full Program in Java</b></p>
+
+<p class=MsoNormal>Here is a complete program demonstrating the concept of
+objects and classes. This program creates a car object from the Car class and
+uses its methods.</p>
+
+<p class=MsoNormal>public class Main {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Creating a new car object from the Car class</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Car myCar = new Car();</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Setting attributes of the car object</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.color = &quot;Red&quot;;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.model = &quot;Toyota&quot;;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.speed = 0;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Using methods of the car object</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.start();</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.accelerate();</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.accelerate();</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCar.stop();</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Displaying the car's attributes</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car Details:&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Color: &quot; +
+myCar.color);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Model: &quot; +
+myCar.model);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Speed: &quot; + myCar.speed
++ &quot; km/h&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>class Car {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Attributes (properties)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; String color;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; String model;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; int speed;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Method to start the car</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; void start() {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car is starting.&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Method to stop the car</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; void stop() {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car is stopping.&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; // Method to accelerate the car</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; void accelerate() {</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speed += 10;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(&quot;Car is accelerating. Speed:
+&quot; + speed + &quot; km/h&quot;);</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal><b>Explanation of the Program:</b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><b>Class Definition</b>: The Car class is defined with
+     three attributes (color, model, speed) and three methods (start, stop, accelerate).</li>
+ <li class=MsoNormal><b>Object Creation</b>: In the main method, a Car object
+     named myCar is created.</li>
+ <li class=MsoNormal><b>Setting Attributes</b>: The attributes of myCar are set
+     to specific values (color is set to &quot;Red&quot;, model to
+     &quot;Toyota&quot;, and speed to 0).</li>
+ <li class=MsoNormal><b>Using Methods</b>: The methods of the myCar object are
+     called to start, accelerate, and stop the car.</li>
+ <li class=MsoNormal><b>Displaying Attributes</b>: The attributes of the myCar
+     object are displayed.</li>
+</ol>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Programming Problem:</b></p>
+
+<p class=MsoNormal>Create a class called Book that has the following
+attributes: title, author, and pages. Add methods to read the book (print a
+message indicating the book is being read) and to close the book (print a
+message indicating the book is closed).</p>
+
+<p class=MsoNormal><b>Your Task:</b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Define the Book class with the attributes and methods
+     mentioned.</li>
+ <li class=MsoNormal>Create an object of the Book class.</li>
+ <li class=MsoNormal>Set the attributes of the book object to specific values.</li>
+ <li class=MsoNormal>Call the methods to read and close the book.</li>
+ <li class=MsoNormal>Print the attributes of the book object.</li>
+</ol>
+
+<p class=MsoNormal>This exercise will help you understand how to create and use
+objects in Java. Happy coding!</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8607681845167073"
+        crossorigin="anonymous"></script>
+        <!-- tan-apcsa -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-8607681845167073"
+        data-ad-slot="4753972224"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div id="footer"></div> 
+    <script src="https://girlwhodoesai.github.io/APCSA/headerfooter.js"></script>
+</body>
+
+</html>
